@@ -96,10 +96,5 @@ public class HomeController {
 
         return "home";
     }
-//    // Delete button !!!
-//    @DeleteMapping("/playlist/{id}")
-//    public String deletePlaylist(@PathVariable Long id) {
-//        userService.delete(id);
-//        return "redirect:/home";
-//    }
+
 }
