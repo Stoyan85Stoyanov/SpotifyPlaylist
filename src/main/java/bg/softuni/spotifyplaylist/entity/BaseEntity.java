@@ -4,10 +4,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.UUID;
 
 @MappedSuperclass
+@Getter
+@Setter
 public class BaseEntity {
 
     @Id
@@ -15,13 +19,5 @@ public class BaseEntity {
     private UUID id;
 
     protected BaseEntity() {
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
     }
 }
