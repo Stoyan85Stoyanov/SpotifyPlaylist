@@ -7,11 +7,9 @@ import bg.softuni.spotifyplaylist.service.SongService;
 import bg.softuni.spotifyplaylist.service.UserService;
 import jakarta.transaction.Transactional;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import bg.softuni.spotifyplaylist.config.UserSession;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 import java.util.Map;
@@ -39,15 +37,6 @@ public class HomeController {
 
         return "index";
     }
-
-//    @GetMapping("/home")
-//    public String loggedInIndex() {
-//
-//        if (!userSession.isLoggedIn()) {
-//            return "redirect:/";
-//        }
-//        return "index";
-//    }
 
     @GetMapping("/home")
     @Transactional
