@@ -17,6 +17,4 @@ public interface SongRepository extends JpaRepository<Song, UUID> {
     @Query("SELECT s FROM Song s")
     List<Song> findAllSongs();
 
-//    List<Song> findByStyle(Style style);
-
 }
