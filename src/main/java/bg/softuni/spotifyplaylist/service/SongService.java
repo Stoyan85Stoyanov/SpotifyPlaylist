@@ -70,10 +70,7 @@ public class SongService {
         return result;
     }
 
-    //        public List<Song> listSongs(String username) {
-//        User user = userRepository.findByUsername(username);
-//        return songRepository.findAllSongs();
-//    }
+
     public List<Song> listSongs() {
         return songRepository.findAllSongs();
     }
