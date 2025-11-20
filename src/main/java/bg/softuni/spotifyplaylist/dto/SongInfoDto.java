@@ -1,9 +1,13 @@
 package bg.softuni.spotifyplaylist.dto;
 
 import bg.softuni.spotifyplaylist.entity.Song;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.UUID;
 
+@Getter
+@Setter
 public class SongInfoDto {
 
 
@@ -20,37 +24,5 @@ public class SongInfoDto {
         this.performer = song.getPerformer();
         this.title = song.getTitle();
         this.duration = song.getDuration();
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getPerformer() {
-        return performer;
-    }
-
-    public void setPerformer(String performer) {
-        this.performer = performer;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Integer getDuration() {
-        return duration;
-    }
-
-    public void setDuration(Integer duration) {
-        this.duration = duration;
     }
 }
