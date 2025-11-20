@@ -3,7 +3,6 @@ package bg.softuni.spotifyplaylist.controller;
 import bg.softuni.spotifyplaylist.config.UserSession;
 import bg.softuni.spotifyplaylist.dto.AddSongDto;
 import bg.softuni.spotifyplaylist.service.SongService;
-import bg.softuni.spotifyplaylist.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
