@@ -2,7 +2,13 @@ package bg.softuni.spotifyplaylist.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@NoArgsConstructor
 public class UserLoginDto {
 
     @NotBlank
@@ -12,23 +18,4 @@ public class UserLoginDto {
     @NotBlank
     @Size(min = 3, max = 20)
     private String password;
-
-    public UserLoginDto() {
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
