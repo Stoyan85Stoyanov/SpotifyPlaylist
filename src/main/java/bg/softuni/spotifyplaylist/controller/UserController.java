@@ -10,7 +10,6 @@ import bg.softuni.spotifyplaylist.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -117,6 +116,7 @@ public class UserController {
         }
 
         User user = userRepository.findById(userSession.id()).orElse(null);
+        assert user != null;
         user.getPlaylist().clear();
         userRepository.save(user);
         return "redirect:/";
