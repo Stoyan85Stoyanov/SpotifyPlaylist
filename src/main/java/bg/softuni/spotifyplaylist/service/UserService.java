@@ -70,8 +70,4 @@ public class UserService {
     public Set<Song> findMyPlaylist(UUID id) {
         return userRepository.findUserById(id).map(User::getPlaylist).orElse(new HashSet<>());
     }
-
-//    public void delete(UUID id) {
-//        userRepository.deleteById(String.valueOf(id));
-//    }
 }
